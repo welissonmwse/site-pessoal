@@ -10,7 +10,20 @@
 body{
     background: rgb(76,2,241);
     background: linear-gradient(90deg, rgba(76,2,241,1) 0%, rgba(6,4,74,1) 100%);
+    font-family: Helvetica, Arial, sans-serif;
+}
 
+.flex{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.titulo{
+    color: var(--primary);
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .container{
@@ -55,7 +68,8 @@ body{
 
 .container header nav ul li a:hover::before{
 	width: 100%;
-	height: 3px;
+	height: 4px;
+    border-radius: 2px;
 }
 
 .apresentacao{
@@ -65,23 +79,77 @@ body{
     height: calc(100vh - 60px);
 }
 
-.apresentacao--titulo, .apresentacao--img{
+.apresentacao--titulo, .container--img{
     width: 100%;
 }
 
 .apresentacao--titulo h1{
     color: #fff;
-    font-family: helvetica, arial, sans-serif;
     font-size: 44px;
     text-align: left;
-
 }
 
 .apresentacao--titulo h1 strong{
     color: var(--primary);
 }
 
-.apresentacao--img{
+.sobre-container, .container-card{
+    margin-bottom: 100px;
+}
+
+.img-fluid{
     max-width: 100%;
     height: auto;
+}
+
+.container-sobre p{
+    color: #fff;
+    font-size: 24px;
+    line-height: 27.6px;
+    /* font-weight: 700; */
+    margin-bottom: 20px;
+}
+
+.container-card{
+    flex: calc(100% / 30%);
+    justify-content: space-between;
+}
+
+.card{
+    width: 100%;
+}
+
+.card-header{
+    padding: 10px;
+}
+
+.card-header h4{
+    color: #fff;
+    font-size: 24px;
+}
+
+.card-body{
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-footer {
+    text-align: center;
+}
+
+.card-footer a{
+    text-decoration: none;
+    color: #06044A;
+    background: var(--primary);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+footer{
+    padding: 20px;
+    background: #06044A;
+    text-align: center;
+    color: #fff;
 }

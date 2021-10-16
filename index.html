@@ -17,13 +17,13 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="#"><img src="/img/Home.svg" alt="Casa"> Casa</a>
+                        <a href="#home"><img src="/img/Home.svg" alt="Casa"> Casa</a>
                     </li>
                     <li>
-                        <a href="#"><img src="/img/Profile.svg" alt="Perfil"> Sobre</a>
+                        <a href="#sobre"><img src="/img/Profile.svg" alt="Perfil"> Sobre</a>
                     </li>
                     <li>
-                        <a href="#"><img src="/img/Desktop.svg" alt="Projetos"> Projetos</a>
+                        <a href="#projetos"><img src="/img/Desktop.svg" alt="Projetos"> Projetos</a>
                     </li>
                     <li>
                         <a href="#"><img src="/img/Document.svg" alt=""> Retormar</a>
@@ -31,16 +31,88 @@
                 </ul>
             </nav>
         </header>
-        <section class="apresentacao">
+        <section id="home" class="apresentacao">
             <div class="apresentacao--titulo">
                 <h1>Olá!<br>
                     Eu Sou <strong>Welisson</strong>  
                 </h1>
             </div>
-            <div class="apresentacao--img">
-                <img src="/img/Frame.png" alt="">
+            <div class="container--img">
+                <img class="img-fluid" src="/img/Frame.png" alt="">
+            </div>
+        </section>
+        <main id="sobre" class="sobre-container">
+            <article class="sobre1 flex">
+                <div class="container--img">
+                    <img class="img-fluid" src="/img/Avatar.png" alt="Avatar">
+                </div>
+                <div class="container-sobre">
+                    <h1 class="titulo">Sobre mim</h1>
+                    <p>Olá a todos, sou Soumyajit Behera de Bhubaneswar, Índia.
+                        Eu sou um júnior buscando IMSC em Matemática e Computação em BIT Mesra. 
+                    </p>
+                    <p>
+                        Além de programar, algumas outras atividades que adoro fazer!
+                    </p>
+                </div>
+            </article>
+            <article class="sobre2 flex">
+                <div class="container-sobre">
+                    <p>Me apaixonei por programação e pelo menos aprendi alguma coisa, acho ... 🤷‍♂️</p>
+
+                    <p>Sou fluente em clássicos como C ++, Javascript e Python.</p>
+
+                    <p>Minhas áreas de interesse são a construção de novas   tecnologias e produtos para a Web e também em áreas relacionadas a Deep Learning e Natural Launguage Processing.</p>
+
+                    <p>Sempre que possível, também aplico minha paixão por desenvolver produtos com Node.js e Modern Javascript Library e Frameworks   como React.js e Next.js</p>
+                </div>
+                <div class="container--img">
+                    <img class="img-fluid" src="/img/Frame_1.png" alt="">
+                </div>
+            </article>
+        </main>
+        <section id="projetos" class="trabalhos">
+            <h1 class="titulo">
+                Meus Trabalhos
+            </h1>
+
+            <div class="container-card flex">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Carshop</h4>
+                    </div>
+                    <div class="card-body">
+                        <img class="img-fluid" src="/img/Rectangle_5.png" alt="">
+                    </div>
+                    <div class="card-footer">
+                        <a href="#">Ver projeto</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Gabriela Nutricionista</h4>
+                    </div>
+                    <div class="card-body">
+                        <img class="img-fluid" src="/img/Rectangle_6.png" alt="">
+                    </div>
+                    <div class="card-footer">
+                        <a href="#">Ver projeto</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Vinicius Designer</h4>
+                    </div>
+                    <div class="card-body">
+                        <img class="img-fluid" src="/img/Rectangle_7.png" alt="">
+                    </div>
+                    <div class="card-footer">
+                        <a href="#">Ver projeto</a>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
+    <footer> <p>Copyright © 2021</p></footer>
 </body>
 </html>
