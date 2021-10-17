@@ -42,6 +42,7 @@ body{
     left: 0;
     width: 100%;
     transition: 0.6s;
+    min-height: 60px;
 }
 
 .container header.sticky{
