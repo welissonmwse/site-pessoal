@@ -57,6 +57,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     transition: 0.6s;
     min-height: 60px;
+    z-index: 999;
 }
 
 .container header.sticky{
