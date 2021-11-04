@@ -13,6 +13,20 @@ body{
     font-family: Helvetica, Arial, sans-serif;
 }
 
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--primary);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #06044a;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 1px solid var(--primary);
+}
+
 .flex{
     display: flex;
     align-items: center;
