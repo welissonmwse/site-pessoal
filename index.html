@@ -12,30 +12,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#home"><img src="/img/Home.svg" alt="Inicio"> Início</a>
-                    </li>
-                    <li>
-                        <a href="#sobre"><img src="/img/Profile.svg" alt="Perfil"> Sobre</a>
-                    </li>
-                    <li>
-                        <a href="#ferramentas"><img src="/img/Setting.png" alt=""> Ferramentas</a>
-                    </li>
-                    <li>
-                        <a href="#projetos"><img src="/img/Desktop.svg" alt="Projetos"> Projetos</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="menu-toggle">
-                <div></div>
-                <div></div>
-                <div></div>
+    <header id="header">
+        <!-- <a id="logo" href="">Logo</a> -->
+        <nav id="nav">
+            <div class="button-content">
+                <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+                    <span id="hamburger"></span>
+                </button>
             </div>
-        </header>
+          <ul id="menu" role="menu">
+            <li><a href="#home"><img src="/img/Home.svg" alt="Inicio"> Início</a></li>
+            <li><a href="#sobre"><img src="/img/Profile.svg" alt="Perfil"> Sobre</a></li>
+            <li><a href="#ferramentas"><img src="/img/Setting.png" alt=""> Ferramentas</a></li>
+            <li><a href="#projetos"><img src="/img/Desktop.svg" alt="Projetos"> Projetos</a></li>
+          </ul>
+        </nav>
+    </header>
+    <div class="container">
         <section id="home" class="apresentacao">
             <div class="apresentacao--titulo">
                 <h1>Olá! <span class="wave" role="img" aria-labelledby="wave">👋🏻</span><br> 

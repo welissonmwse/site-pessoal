@@ -47,65 +47,48 @@ body::-webkit-scrollbar-thumb {
     width: 80%;
     margin: 0 auto;
     max-width: 1200px;
-    position: relative;
+    /* position: relative; */
 }
 
-.container header{
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+  
+#header {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    right: 0;
     transition: 0.6s;
     min-height: 60px;
     z-index: 999;
 }
 
-.container header.sticky{
+#header.sticky{
     background: inherit;
-    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.07);
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
 }
-
-.container header nav{
-    width: 90%;
-    position: relative;
-    transition: 0.6s;
-}
-
-.menu-toggle{
-    display: none;
-    flex-direction: column;
-    gap: 4px;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.menu-toggle div{
-    width: 30px;
-    height: 4px;
-    background: var(--primary);
-}
-
-.container header nav ul{
-    list-style: none;
+  
+#menu {
     display: flex;
+    gap: 0.5rem;
     align-items: center;
     justify-content: flex-end;
-    transition: ease .9s;
+    list-style: none;
 }
 
-.container header nav ul.active{
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px;
-    transition: 0.6s;
+#nav{
+    width: 100%;
 }
-
-.container header nav ul li a{
-    position: relative;
+  
+#menu a {
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -115,9 +98,10 @@ body::-webkit-scrollbar-thumb {
     font-size: 24px;
     color: var(--primary);
     padding: 10px 20px;
+    position: relative;
 }
 
-.container header nav ul li a::before{
+#menu a::before{
 	content: '';
 	position: absolute;
 	bottom: 0;
@@ -130,11 +114,16 @@ body::-webkit-scrollbar-thumb {
 	transition: ease .9s;
 }
 
-.container header nav ul li a:hover::before{
+#menu a:hover::before{
 	width: 100%;
 	height: 4px;
     border-radius: 2px;
 }
+  
+#btn-mobile {
+    display: none;
+}
+  
 
 .apresentacao{
     display: flex;
@@ -299,22 +288,17 @@ footer{
 }
 
 @media(max-width: 900px) {
-    .container header{
+    #header{
         background: inherit;
         box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
         -webkit-backdrop-filter: blur(15px);
         backdrop-filter: blur(15px);
     }
 
-    .container header nav ul{
-        display: none;
-    }
-
-    .menu-toggle{
+    .button-content{
         display: flex;
-        position: absolute;
-        right: 10px;
-        top: 10px;
+        justify-content: flex-end;
+        padding: 1rem;
     }
 
     .apresentacao--titulo h1{
@@ -337,9 +321,69 @@ footer{
         padding: 6px 20px;
         font-size: 13px;
     }
+    #menu {
+        display: block;
+        transition: 0.6s;
+        width: 100%;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    
+    #nav.active #menu {
+        height: 36vh;
+        visibility: visible;
+        overflow-y: auto;
+    }
+    
+    #menu a {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    #btn-mobile {
+        display: flex;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 0.5rem;
+        color: var(--primary);
+    }
+    
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+    }
+    
+    #hamburger::after,
+    #hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+    }
+    
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+    
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+    
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
 }
 
 @media(max-width: 600px){
+
     .container-card-ferramentas{
         grid-template-columns: repeat(2, 1fr);
     }
